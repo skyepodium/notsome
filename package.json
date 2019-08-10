@@ -8,8 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@swup/slide-theme": "^1.0.5",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "normalize.css": "^8.0.1",
+    "swup": "^2.0.5",
+    "vue": "^2.6.10",
+    "vue-page-transition": "^0.2.2",
+    "vue-router": "^3.1.2",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.10.0",
@@ -26,7 +32,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/recommended",
       "eslint:recommended"
     ],
     "rules": {},

@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <vue-page-transition name="overlay-left">
+      <router-view :key="$route.fullPath" />
+    </vue-page-transition>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TheHeader from '@/layouts/TheHeader.vue'
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
+    TheHeader,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+input[type="text"], input[type="password"] { outline: none; }
+textarea[type="text"], textarea[type="password"] { outline: none; }
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #719ECE;
+}
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Nunito&display=swap');
+#app{
 }
 </style>
